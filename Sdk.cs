@@ -11,6 +11,7 @@
  */
 
 namespace Microsoft.Net;
+using Microsoft.Net.Abstractions;
 
 public record struct Sdk
 {
@@ -23,5 +24,5 @@ public record struct Sdk
     public bool AllowPrerelease { get; set; } = false;
 
     [JProp("rollForward")]
-    public RollForward RollForward { get; set; } = RollForward.Disable.Instance;
+    public IRollForward RollForward { get; set; } = Microsoft.Net.RollForward.Disable.Instance;
 }
