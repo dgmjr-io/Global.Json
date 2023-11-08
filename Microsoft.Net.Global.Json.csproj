@@ -4,10 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <SourceGenerator  Include="Dgmjr.RegexDtoGenerator" />
-    <SourceGenerator  Include="Dgmjr.Enumerations.CodeGenerator" />
-    <PackageReference  Include="Dgmjr.Enumerations.Abstractions" />
-    <PackageReference Include="System.Text.Json.Usings" />
-    <PackageReference Include="System.ComponentModel.Usings" />
+    <PackageReference Include="Dgmjr.Abstractions" />
+    <PackageReference Include="Dgmjr.Primitives" />
+    <PackageReference Include="Dgmjr.Enumerations.Abstractions" />
+    <PackageReference Include="Dgmjr.Enumerations.CodeGenerator" IncludeAssets="Analyzers;Build" ExcludeAssets="Native;BuildTransitive;BuildMultitargeting;ContentFiles;Compile;Runtime" PrivateAssets="All" />
+    <PackageReference Include="Dgmjr.RegexDtoGenerator" IncludeAssets="Analyzers;Build" ExcludeAssets="Native;BuildTransitive;BuildMultitargeting;ContentFiles;Compile;Runtime" PrivateAssets="All" />
+    <PackageReference Include="System.ComponentModel.Usings" IncludeAssets="Build;BuildTransitive;BuildMultitargeting;Runtime;Compile" ExcludeAssets="ContentFiles;Native;Analyzers" PrivateAssets="None" />
+    <PackageReference Include="System.Text.Json.Usings" IncludeAssets="Build;BuildTransitive;BuildMultitargeting;Runtime;Compile" ExcludeAssets="ContentFiles;Native;Analyzers" PrivateAssets="None" />
   </ItemGroup>
 </Project>
